@@ -498,8 +498,10 @@
               <td>80 GB</td>
               <td>4 TB</td>
               <td>40/4 Gbps</td>
-              <td class="bg-success">
-                <i class="fa-solid fa-arrow-right text-white"></i>
+              <td>
+                <button class="bg-success open-modal">
+                  <i class="fa-solid fa-arrow-right text-white"></i>
+                </button>
               </td>
             </tr>
             <tr class="table-row-three">
@@ -511,8 +513,10 @@
               <td>160 GB</td>
               <td>5 TB</td>
               <td>40/5 Gbps</td>
-              <td class="bg-success">
-                <i class="fa-solid fa-arrow-right text-white"></i>
+              <td>
+                <button class="bg-success open-modal">
+                  <i class="fa-solid fa-arrow-right text-white"></i>
+                </button>
               </td>
             </tr>
             <tr class="table-row-three">
@@ -524,8 +528,10 @@
               <td>320 GB</td>
               <td>6 TB</td>
               <td>40/6 Gbps</td>
-              <td class="bg-success">
-                <i class="fa-solid fa-arrow-right text-white"></i>
+              <td>
+                <button class="bg-success open-modal">
+                  <i class="fa-solid fa-arrow-right text-white"></i>
+                </button>
               </td>
             </tr>
             <tr class="table-row-three">
@@ -537,10 +543,13 @@
               <td>640 GB</td>
               <td>7 TB</td>
               <td>40/7 Gbps</td>
-              <td class="bg-success">
-                <i class="fa-solid fa-arrow-right text-white"></i>
+              <td>
+                <button class="bg-success open-modal">
+                  <i class="fa-solid fa-arrow-right text-white"></i>
+                </button>
               </td>
             </tr>
+
             <tr class="table-row-three">
               <td class="text-success fw-bold">Dedicated 64 GB</td>
               <td>$576</td>
@@ -550,8 +559,10 @@
               <td>1280 GB</td>
               <td>48 TB</td>
               <td>40/8 Gbps</td>
-              <td class="bg-success">
-                <i class="fa-solid fa-arrow-right text-white"></i>
+              <td>
+                <button class="bg-success open-modal">
+                  <i class="fa-solid fa-arrow-right text-white"></i>
+                </button>
               </td>
             </tr>
             <tr class="table-row-three">
@@ -563,8 +574,10 @@
               <td>1320 GB</td>
               <td>9 TB</td>
               <td>40/9 Gbps</td>
-              <td class="bg-success">
-                <i class="fa-solid fa-arrow-right text-white"></i>
+              <td>
+                <button class="bg-success open-modal">
+                  <i class="fa-solid fa-arrow-right text-white"></i>
+                </button>
               </td>
             </tr>
             <tr class="table-row-three">
@@ -576,8 +589,10 @@
               <td>2500 GB</td>
               <td>10 TB</td>
               <td>40/10 Gbps</td>
-              <td class="bg-success">
-                <i class="fa-solid fa-arrow-right text-white"></i>
+              <td>
+                <button class="bg-success open-modal" id="openModal">
+                  <i class="fa-solid fa-arrow-right text-white"></i>
+                </button>
               </td>
             </tr>
             <tr class="table-row-three">
@@ -589,8 +604,10 @@
               <td>5000 GB</td>
               <td>11 TB</td>
               <td>40/11 Gbps</td>
-              <td class="bg-success">
-                <i class="fa-solid fa-arrow-right text-white"></i>
+              <td>
+                <button class="bg-success open-modal" id="openModal">
+                  <i class="fa-solid fa-arrow-right text-white"></i>
+                </button>
               </td>
             </tr>
             <tr class="table-row-three last-tr">
@@ -602,8 +619,10 @@
               <td>7200 GB</td>
               <td>12 TB</td>
               <td>40/12 Gbps</td>
-              <td class="bg-success">
-                <i class="fa-solid fa-arrow-right text-white"></i>
+              <td>
+                <button class="bg-success open-modal">
+                  <i class="fa-solid fa-arrow-right text-white"></i>
+                </button>
               </td>
             </tr>
           </tbody>
@@ -1109,6 +1128,16 @@
       </div>
     </footer>
 
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Put Your Order Here</p>
+        <div class="mt-5 end">
+          <button class="bg-purple text-white mt-5 end">Order Now</button>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
       type="6d03c29a7e13844addcbd085-text/javascript"
@@ -1130,5 +1159,38 @@
       type="6d03c29a7e13844addcbd085-text/javascript"
       src="https://serverhump.com/js/custom.js?ts=1704723365"
     ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const modal = document.getElementById("myModal");
+      const buttons = document.querySelectorAll(".open-modal");
+      const span = document.getElementsByClassName("close")[0];
+
+      buttons.forEach((button) => {
+        button.onclick = function () {
+          modal.style.display = "block";
+        };
+      });
+
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
   </body>
 </html>

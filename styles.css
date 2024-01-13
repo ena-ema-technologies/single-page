@@ -37,7 +37,6 @@ tr .text-purple {
 
 .table-two {
   width: 800px;
-  border-collapse: collapse;
   overflow: auto;
 }
 .table-three {
@@ -240,4 +239,109 @@ tr .text-purple {
   padding-top: 3px;
   padding-bottom: 3px;
   border-radius: 2px;
+  border: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 35%;
+  top: 30%;
+  width: 600px;
+  height: 600px;
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.end {
+  display: flex;
+  justify-content: end;
+}
+
+@media only screen and (max-width: 576px) {
+  section {
+    padding: 5px;
+  }
+  .d-flex {
+    flex-direction: column;
+  }
+  .table-three {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .table-two {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    overflow-x: auto;
+  }
+  .tables {
+    width: auto;
+    overflow-x: auto;
+    background: white;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .table-three {
+    width: auto;
+    overflow-x: auto;
+    background: white;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-one-flex {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .table-row {
+    padding: 0;
+  }
+  .section-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+  }
+  .type {
+    display: flex;
+    margin-top: 10px;
+    gap: 4rem;
+    align-items: center;
+  }
 }
