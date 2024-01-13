@@ -287,21 +287,26 @@ tr .text-purple {
   .d-flex {
     flex-direction: column;
   }
-  .table-three {
-    max-width: 100%;
-    overflow-x: auto;
-  }
-  .table-two {
+  /* .table-two {
     display: flex;
     flex-direction: column;
     max-width: 400px;
     overflow-x: auto;
-  }
+  } */
   .tables {
     width: auto;
     overflow-x: auto;
     background: white;
-    max-width: 400px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .table-two {
+    width: auto;
+    overflow-x: auto;
+    background: white;
+    max-width: 300px;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -310,7 +315,7 @@ tr .text-purple {
     width: auto;
     overflow-x: auto;
     background: white;
-    max-width: 400px;
+    max-width: 300px;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -330,6 +335,18 @@ tr .text-purple {
   }
   .table-row {
     padding: 0;
+  }
+  .table-row-two {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
   }
   .section-two {
     display: flex;
